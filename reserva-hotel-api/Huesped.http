@@ -1,0 +1,38 @@
+@BASE_URL=http://localhost:8080
+
+### huesped
+
+GET {{BASE_URL}}/huesped
+
+###
+GET {{BASE_URL}}/huesped/7
+
+###
+POST {{BASE_URL}}/huesped HTTP/1.1
+content-type: application/json
+ 
+{
+  "dni":45920164,
+  "nombres": "Huesped Prueba",
+  "apellidos": "Vargas Llosa",
+  "direccion": "av. cordillera 477",
+  "telefono": 987654433,
+  "email": "huespedPrueba@gmail.com"
+}
+
+###
+PUT {{BASE_URL}}/huesped/7 HTTP/1.1
+content-type: application/json
+ 
+{
+  "dni":45920164,
+  "nombres": "Huesped Actualizado",
+  "apellidos": "Vargas Llosa",
+  "direccion": "av. cordillera 477",
+  "telefono": 987654433,
+  "email": "huespedPrueba@gmail.com"
+}
+
+###
+PATCH {{BASE_URL}}/huesped/dar-baja/7 HTTP/1.1
+

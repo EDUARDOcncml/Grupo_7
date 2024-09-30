@@ -1,0 +1,40 @@
+@BASE_URL=http://localhost:8080
+
+###
+GET {{BASE_URL}}/habitaciones
+
+###
+GET {{BASE_URL}}/habitaciones/4
+
+###
+POST {{BASE_URL}}/habitaciones HTTP/1.1
+content-type: application/json
+ 
+{
+  "nombre": "Habitacion prueba",
+  "tipo": "Gran Suite",
+  "pisoUbicacion":6,
+  "precio": 320.00,
+  "descripcion": "Consta de un dormitorio y un salón con sofá cama en forma de L",
+  "imagenUrl": "http://localhost:8090/imagenes/restaurante1.jpg",
+  "latitud": "-12.1460036",
+  "longitud": "-76.9878069"
+}
+
+###
+PUT {{BASE_URL}}/habitaciones/5 HTTP/1.1
+content-type: application/json
+ 
+{
+  "nombre": "Habitacion actualizar",
+  "tipo": "Gran Suite",
+  "pisoUbicacion":"6",
+  "precio": 320.0,
+  "descripcion": "Consta de un dormitorio y un salón con sofá cama en forma de L",
+  "imagenUrl": "http://localhost:8090/imagenes/restaurante1.jpg",
+  "latitud": "-12.1460036",
+  "longitud": "-76.9878069"
+}
+
+###
+PATCH {{BASE_URL}}/habitaciones/dar-baja/5 HTTP/1.1
