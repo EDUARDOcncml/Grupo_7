@@ -1,0 +1,37 @@
+@BASE_URL=http://localhost:8080
+
+###
+GET {{BASE_URL}}/api/servicio-adicional/sorted?sortBy=idServicio HTTP/1.1
+
+###
+GET {{BASE_URL}}/api/servicio-adicional/paginated?page=0&size=2 HTTP/1.1
+
+### 
+
+GET {{BASE_URL}}/servicio-adicional
+
+###
+GET {{BASE_URL}}/servicio-adicional/6
+
+###
+POST {{BASE_URL}}/servicio-adicional HTTP/1.1
+content-type: application/json
+ 
+{
+  "nombre": "Servicio Prueba",
+  "descripcion": "Servicio Adicional se esta comprobando",
+  "precio": 10
+}
+
+###
+PUT {{BASE_URL}}/servicio-adicional/7 HTTP/1.1
+content-type: application/json
+ 
+{
+  "nombre": "Servicio Actualizado",
+  "descripcion": "Servicio Adicional se esta comprobando",
+  "precio": 10
+}
+
+###
+PATCH {{BASE_URL}}/servicio-adicional/dar-baja/7 HTTP/1.1
